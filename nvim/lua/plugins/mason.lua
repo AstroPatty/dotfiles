@@ -139,7 +139,6 @@ function mconfig.config()
         pylsp = {
           plugins = {
             autopep8 = { enabled = false },
-            yapf = { enabled = true },
           },
         },
       },

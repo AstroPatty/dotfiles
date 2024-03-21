@@ -2,7 +2,6 @@
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 require 'opts'
-require 'keys'
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -38,3 +37,4 @@ vim.opt.rtp:prepend(lazypath)
 -- vim: ts=2 sts=2 sw=2 et
 --
 require 'plugins'
+require 'keys'

@@ -23,6 +23,7 @@ require('lazy').setup({
   require 'plugins.wkey',
   require 'plugins.telescope',
   require 'plugins.lspconfig',
+  require 'plugins.harpoon',
 
   { -- Autoformat
     'stevearc/conform.nvim',
@@ -107,3 +108,6 @@ require('lazy').setup({
     },
   },
 })
+
+local harpoon = require 'harpoon'
+harpoon:setup()
