@@ -28,12 +28,12 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
 local harpoon = require 'harpoon'
+harpoon:setup()
 
 vim.keymap.set('n', '<leader>a', function()
   harpoon:list():append()
-end)
+end, { desc = 'Add current file to Harpoon list' })
 vim.keymap.set('n', '<C-e>', function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
@@ -52,9 +52,9 @@ vim.keymap.set('n', '<C-s>', function()
 end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set('n', '<C-S-P>', function()
+vim.keymap.set('n', '<leader>t', function()
   harpoon:list():prev()
-end)
-vim.keymap.set('n', '<C-S-N>', function()
+end, { desc = 'Toggle to Previous Harpoon list' })
+vim.keymap.set('n', '<leader>y', function()
   harpoon:list():next()
-end)
+end, { desc = 'Toggle to Next Harpoon list' })

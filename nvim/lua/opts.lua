@@ -5,6 +5,8 @@ vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
+vim.g.netrw_hide = 1 -- Hide __pycache__ and other files
+vim.g.netrw_list_hide = '__pycache__/' -- Hide __pycache__ and other files
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`

@@ -20,10 +20,12 @@ require('lazy').setup({
     },
   },
 
+  { 'nvim-tree/nvim-web-devicons' },
   require 'plugins.wkey',
   require 'plugins.telescope',
   require 'plugins.lspconfig',
   require 'plugins.harpoon',
+  require 'plugins.markprev',
 
   { -- Autoformat
     'stevearc/conform.nvim',
