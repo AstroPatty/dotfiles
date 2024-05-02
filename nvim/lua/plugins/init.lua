@@ -5,7 +5,7 @@ vim.diagnostic.config {
 
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  'github/copilot.vim',
+  { 'github/copilot.vim', enabled = false },
   { 'numToStr/Comment.nvim', opts = {} },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -88,7 +88,8 @@ require('lazy').setup({
     end,
   },
 
-  require 'plugins.treesitter',
+  'plugins.treesitter',
+  'plugins.treesitter_textobj',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
