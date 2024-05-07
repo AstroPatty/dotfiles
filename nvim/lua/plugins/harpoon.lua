@@ -3,7 +3,7 @@ local cfg = {
   branch = 'harpoon2',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'tnvim-telescope/telescope.nvim',
+    'nvim-telescope/telescope.nvim',
   },
 }
 

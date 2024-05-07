@@ -26,6 +26,7 @@ require('lazy').setup({
   require 'plugins.lspconfig',
   require 'plugins.harpoon',
   require 'plugins.markprev',
+  require 'plugins.obsidian',
 
   { -- Autoformat
     'stevearc/conform.nvim',
@@ -88,8 +89,8 @@ require('lazy').setup({
     end,
   },
 
-  'plugins.treesitter',
-  'plugins.treesitter_textobj',
+  require 'plugins.treesitter',
+  require 'plugins.treesitter_textobj',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the

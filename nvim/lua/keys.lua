@@ -1,3 +1,5 @@
+local commands = require 'cmds'
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
@@ -14,6 +16,16 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set('n', '<leader>osf', function()
+  vim.cmd 'ObsidianQuickSwitch'
+end, { desc = 'Search Obsidian Notes' })
+
+vim.keymap.set('n', '<leader>osg', function()
+  vim.cmd 'ObsidianSearch'
+end, { desc = 'Search (grep) Obsidian Notes' })
+vim.keymap.set('n', '<leader>osn', function()
+  commands.CreateNoteInFolder 'Inbox'
+end)
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
