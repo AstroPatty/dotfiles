@@ -152,6 +152,7 @@ function mconfig.config()
       settings = {
         Lua = {
           runtime = { version = 'LuaJIT' },
+          hint = { enable = true },
           workspace = {
             checkThirdParty = false,
             -- Tells lua_ls where to find all the Lua files that you have loaded
