@@ -5,7 +5,7 @@ vim.diagnostic.config {
 
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  { 'github/copilot.vim', enabled = false },
+  { 'github/copilot.vim', enabled = true },
   { 'numToStr/Comment.nvim', opts = {} },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -20,14 +20,17 @@ require('lazy').setup({
     },
   },
 
+  {
+    'm4xshen/hardtime.nvim',
+    dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+    opts = {},
+  },
   { 'nvim-tree/nvim-web-devicons' },
   require 'plugins.wkey',
   require 'plugins.telescope',
   require 'plugins.lspconfig',
-  require 'plugins.harpoon',
   require 'plugins.markprev',
-  require 'plugins.obsidian',
-
+  require 'themes.tokyonight',
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
@@ -48,7 +51,6 @@ require('lazy').setup({
     },
   },
   require 'plugins.cmp',
-  require 'themes.tokyonight',
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   { -- Collection of various small independent plugins/modules
@@ -112,6 +114,3 @@ require('lazy').setup({
     },
   },
 })
-
-local harpoon = require 'harpoon'
-harpoon:setup()
