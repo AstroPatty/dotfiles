@@ -1,1 +1,0 @@
-This neovim configuration is a heavily modified version of [kickstart.vim](https://github.com/nvim-lua/kickstart.nvim). I highly recommend checking it out as a way to get started. The license for kickstart also applies here.
