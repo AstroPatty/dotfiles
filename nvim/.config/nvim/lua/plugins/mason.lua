@@ -139,6 +139,7 @@ function mconfig.config()
         pylsp = {
           plugins = {
             autopep8 = { enabled = false },
+            pycodestyle = { maxLineLength = 88 },
             yapf = { enabled = true },
           },
         },
