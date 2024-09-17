@@ -139,8 +139,20 @@ function mconfig.config()
         pylsp = {
           plugins = {
             autopep8 = { enabled = false },
-            pycodestyle = { maxLineLength = 88 },
-            yapf = { enabled = true },
+            pycodestyle = { enabled = false },
+            mccabe = { enabled = false },
+            yapf = { enabled = false },
+            pyflakes = { enabled = false },
+          },
+        },
+      },
+    },
+    ruff = {
+      init_options = {
+        settings = {
+          lineLength = 88,
+          lint = {
+            extendSelect = { 'E5' },
           },
         },
       },
