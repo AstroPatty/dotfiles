@@ -5,7 +5,6 @@ vim.diagnostic.config {
 
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  { 'github/copilot.vim', enabled = true },
   { 'numToStr/Comment.nvim', opts = {} },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -27,6 +26,8 @@ require('lazy').setup({
   },
   { 'nvim-tree/nvim-web-devicons' },
   require 'plugins.wkey',
+  (require 'plugins.copilot').copilot,
+  (require 'plugins.copilot').copilot_chat,
   require 'plugins.telescope',
   require 'plugins.lspconfig',
   require 'plugins.markprev',

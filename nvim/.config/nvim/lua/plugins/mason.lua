@@ -90,6 +90,9 @@ function mconfig.config()
       --
       -- When you move your cursor, the highlights will be cleared (the second autocommand).
       local client = vim.lsp.get_client_by_id(event.data.client_id)
+      if client and client.name == 'pylsp' then
+        client.server_capabilities.renameProvider = false
+      end
       if client and client.server_capabilities.documentHighlightProvider then
         vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
           buffer = event.buf,
@@ -138,21 +141,13 @@ function mconfig.config()
       settings = {
         pylsp = {
           plugins = {
-            autopep8 = { enabled = false },
-            pycodestyle = { enabled = false },
-            mccabe = { enabled = false },
-            yapf = { enabled = false },
-            pyflakes = { enabled = false },
-          },
-        },
-      },
-    },
-    ruff = {
-      init_options = {
-        settings = {
-          lineLength = 88,
-          lint = {
-            extendSelect = { 'E5' },
+            rope = {
+              enabled = true,
+            },
+            isort = { enabled = true },
+            black = { enabled = true },
+            pycodestyle = { enabled = true },
+            mccabe = { enabled = true },
           },
         },
       },

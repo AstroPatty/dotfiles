@@ -25,3 +25,13 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>ccq', function()
+  local input = vim.fn.input 'Quick Chat: '
+  if input ~= '' then
+    require('CopilotChat').ask(input, { selection = require('CopilotChat.select').buffer })
+  end
+end, { desc = 'CopilotChat - Quick chat' })
+
+vim.keymap.set('n', '<leader>cct', function()
+  require('CopilotChat').toggle()
+end, { desc = 'CopilotChat - Toggle' })
