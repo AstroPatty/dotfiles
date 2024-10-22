@@ -35,3 +35,5 @@ end, { desc = 'CopilotChat - Quick chat' })
 vim.keymap.set('n', '<leader>cct', function()
   require('CopilotChat').toggle()
 end, { desc = 'CopilotChat - Toggle' })
+
+vim.keymap.set('n', '<leader>-', '<CMD>Oil<CR>', { desc = 'Open directory in Oil' })

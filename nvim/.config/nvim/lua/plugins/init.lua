@@ -32,6 +32,13 @@ require('lazy').setup({
   require 'plugins.lspconfig',
   require 'plugins.markprev',
   require 'themes.tokyonight',
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type 'oil.SetupOpts'
+    opts = {},
+    dependencies = { { 'echasnovski/mini.icons', opts = {} } },
+  },
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
