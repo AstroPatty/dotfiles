@@ -144,11 +144,19 @@ function mconfig.config()
             rope = {
               enabled = true,
             },
+            pyflakes = { enabled = false },
             isort = { enabled = true },
             black = { enabled = true },
-            pycodestyle = { enabled = true },
+            pycodestyle = { enabled = false },
             mccabe = { enabled = true },
           },
+        },
+      },
+    },
+    ruff = {
+      init_options = {
+        settings = {
+          lineLength = 88,
         },
       },
     },
