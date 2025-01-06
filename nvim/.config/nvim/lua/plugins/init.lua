@@ -51,7 +51,8 @@ require('lazy').setup({
         lua = { 'stylua' },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
-        python = { 'isort', 'black' },
+        python = { 'ruff_organize_imports', 'ruff_format' },
+
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

@@ -1,4 +1,4 @@
-local copilot = { 'github/copilot.vim', enabled = true }
+local copilot = { 'github/copilot.vim' }
 local copilot_chat = {
   'CopilotC-Nvim/CopilotChat.nvim',
   branch = 'canary',

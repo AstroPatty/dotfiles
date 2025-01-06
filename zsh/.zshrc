@@ -61,3 +61,5 @@ eval "$(zoxide init zsh)"
 #fzf
 eval "$(fzf --zsh)"
 
+
+[ -f "${HOME}/.ghcup/env" ] && . "${HOME}/.ghcup/env" # ghcup-env

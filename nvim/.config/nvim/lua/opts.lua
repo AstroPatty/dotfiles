@@ -15,6 +15,7 @@ vim.g.netrw_list_hide = '__pycache__/' -- Hide __pycache__ and other files
 
 -- Make line numbers default
 vim.opt.number = true
+vim.opt.relativenumber = true
 -- You can also add relative line numbers, for help with jumping.
 --  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true

@@ -148,7 +148,7 @@ function mconfig.config()
             isort = { enabled = false },
             black = { enabled = false },
             pycodestyle = { enabled = false },
-            mccabe = { enabled = true },
+            mccabe = { enabled = false },
           },
         },
       },
