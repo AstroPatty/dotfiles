@@ -39,29 +39,6 @@ require('lazy').setup({
     opts = {},
     dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   },
-  { -- Autoformat
-    'stevearc/conform.nvim',
-    opts = {
-      notify_on_error = true,
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_fallback = true,
-      },
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        javascript = { 'prettierd' },
-        typescript = { 'prettierd' },
-        python = { 'ruff_organize_imports', 'ruff_format' },
-
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
-      },
-    },
-  },
   require 'plugins.cmp',
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 

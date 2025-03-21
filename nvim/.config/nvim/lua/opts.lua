@@ -8,6 +8,7 @@ vim.g.have_nerd_font = false
 vim.g.netrw_hide = 1 -- Hide __pycache__ and other files
 vim.g.netrw_list_hide = '__pycache__/' -- Hide __pycache__ and other files
 
+vim.g.python3_host_prog = '/Users/patrick/.pyenv/versions/3.12.1/bin/python'
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!

@@ -1,12 +1,12 @@
 local copilot = { 'github/copilot.vim' }
 local copilot_chat = {
   'CopilotC-Nvim/CopilotChat.nvim',
-  branch = 'canary',
   dependencies = {
-    { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
+    { 'github/copilot.vim' },
     { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
   },
   build = 'make tiktoken', -- Only on MacOS or Linux
+  branch = 'main', -- Default is main
   opts = {
     debug = true, -- Enable debugging
     -- See Configuration section for rest
