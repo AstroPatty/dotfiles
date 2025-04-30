@@ -26,11 +26,8 @@ require('lazy').setup({
   },
   { 'nvim-tree/nvim-web-devicons' },
   require 'plugins.wkey',
-  (require 'plugins.copilot').copilot,
-  (require 'plugins.copilot').copilot_chat,
   require 'plugins.telescope',
   require 'plugins.lspconfig',
-  require 'plugins.markprev',
   require 'themes.tokyonight',
   {
     'stevearc/oil.nvim',
