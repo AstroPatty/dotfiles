@@ -5,7 +5,7 @@ alias vim="nvim"
 
 # Attach to the main tmux session, or create it if it doesn't exist
 if [ -z "$TMUX" ]; then
-  tmux a -t main || tmux new-session -A -s main
+  tmux a -t home || tmux new-session -A -s home
 fi
 
 # Setup the route to package manager
@@ -67,4 +67,27 @@ source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.3.5 # run chruby to see actual version
 
+function connect_server() {
+    local server_name=$1
+    tmux switch -t $server_name || tmuxinator start ssh $server_name
+    
+}
+
+alias cs=connect_server
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/patrick/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/patrick/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/patrick/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/patrick/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
