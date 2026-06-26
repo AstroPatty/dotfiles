@@ -1,6 +1,1 @@
-local cfg = {
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  branch = 'main',
-}
-
-return cfg
+-- nvim-treesitter-textobjects is loaded by vim.pack; no additional setup required

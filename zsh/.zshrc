@@ -10,6 +10,7 @@ fi
 
 # Setup the route to package manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit"
+alias marktext="/Applications/MarkText.app/Contents/MacOS/marktext"
 
 # Download zinit if it doesn't exist
 if [[ ! -d $ZINIT_HOME ]]; then
@@ -24,6 +25,7 @@ source "$ZINIT_HOME/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+alias cu="pnpx ccusage claude"
 
 autoload -U compinit && compinit
 
@@ -54,7 +56,6 @@ fi
 # ocaml setup
 [[ ! -r ~/.opam/opam-init/init.zsh ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-# starship setup
 eval "$(starship init zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
@@ -76,3 +77,22 @@ function connect_server() {
 alias cs=connect_server
 
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/patrick/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/patrick/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/patrick/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/patrick/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform

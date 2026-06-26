@@ -13,12 +13,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-require 'lazy_init'
+require 'pack_init'
 require 'keys'
 
-vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
   callback = function()
-    vim.treesitter.start()
+    if vim.treesitter.language.get_lang(vim.bo.filetype) then
+      pcall(vim.treesitter.start)
+    end
   end,
 })

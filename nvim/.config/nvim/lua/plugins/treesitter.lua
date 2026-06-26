@@ -1,6 +1,2 @@
-local cfg = {
-  'nvim-treesitter/nvim-treesitter',
-  lazy = false,
-  build = ':TSUpdate',
-}
-return cfg
+-- nvim-treesitter provides :TSUpdate/:TSInstall commands.
+-- Highlighting is handled by the built-in vim.treesitter.start() in init.lua.
